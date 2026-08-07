@@ -2,23 +2,18 @@
 <script>
   function loadPage(page) {
       google.script.run
-        .withSuccessHandler(function(html) {
-        
-          document.getElementById("content").innerHTML = html;
-
-          
+        .withSuccessHandler(function(html) {        
+          document.getElementById("content").innerHTML = html;          
           if(page==='getregis'){ requestAnimationFrame(loadRegisterData); }
         })
         .withFailureHandler(function(error) {
          
           alert("โหลดหน้าไม่สำเร็จ: " + error.message);
         })
-       
         .include(page);
     }
 </script>
 <script>
-  
     document.addEventListener('DOMContentLoaded', function () {
       loadPage('home');
     });
