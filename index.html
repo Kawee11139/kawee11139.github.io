@@ -47,22 +47,5 @@
 
   <div id="content" style="margin-top: 20px;"></div>
 </div>
-   
-
-
-
-    <script>
-      function loadPage(page) {
-        google.script.run.withSuccessHandler(function(html){
-          document.getElementById("content").innerHTML =html;
-        }).include(page);
-      }
-
-      function showAlert() {
-        alert("ดำเนินการสำเร็จ!");
-        google.script.run.showAlert("บันทึกข้อมูลแล้ว");
-      }
-    </script>
-  
   </body>
 </html>
